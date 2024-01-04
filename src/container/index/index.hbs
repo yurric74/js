@@ -2,10 +2,78 @@
 Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 }}
+<form class='form' id='form'>
+  <img
+    height='160px'
+    width='100%'
+    src='https://picsum.photos/1200/1200'
+    alt='Form image'
+    class='form__image'
+  />
 
-<main>
-	{{>heading title="Index" info=data.test}}
-</main>
+  <h1 class='form__title'>Реєстрація користувача</h1>
+
+  <div class='form__group'>
+    <label class='form__label' for='username'>Ім'я
+      користувавча</label>
+    <input
+      class='form__input'
+      type='text'
+      id='username'
+      name='username'
+      required
+    />
+  </div>
+  <div class='form__group'>
+    <label class='form__label' for='email'>Email</label>
+    <input
+      class='form__input'
+      type='email'
+      id='email'
+      name='email'
+      required
+    />
+  </div>
+  <div class='form__group'>
+    <label class='form__label' for='age'>Age</label>
+    <input
+      class='form__input'
+      type='age'
+      id='age'
+      name='age'
+      required
+    />
+  </div>
+  <div class='form__group'>
+    <label class='form__label' for='role'>Оберіть роль</label>
+    <select
+      class='form__select'
+      id='role'
+      name='role'
+      required
+    >
+      <option value='' disabled='' selected=''>РОЛЬ</option>
+      <option value='user'>Користувач</option>
+      <option value='admin'>Адміністратор</option>
+
+    </select>
+  </div>
+  <div class='form__group form__group--checkbox'>
+    <label class='form__label' for='agree'>Відправити
+      повідомлення на Email</label>
+    <input
+      class='form__input'
+      type='checkbox'
+      id='agree'
+      name='agree'
+      required
+    />
+  </div>
+  <button
+    class='form__button'
+    type='submit'
+  >Зареєструватись</button>
+</form>
 
 {{!
     Цей код містить лише те, що буде виводитись в <body>
